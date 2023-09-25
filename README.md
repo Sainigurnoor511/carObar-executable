@@ -43,7 +43,7 @@ cd carObar-executable
 
 ## Screenshots
 
-![Car Dealership Management App Screenshot](screenshots/Screenshot 2023-09-25 144328.png)
+![Car Dealership Management App Screenshot](screenshots/)
 
 ## Contributing
 
