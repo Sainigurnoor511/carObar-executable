@@ -41,9 +41,9 @@ cd carObar-executable
 
 5. Use the application to manage your car dealership.
 
-<!-- ## Screenshots
+## Screenshots
 
-![Car Dealership Management App Screenshot](screenshots/screenshot.png) -->
+![Car Dealership Management App Screenshot](screenshots/screenshot.png)
 
 ## Contributing
 
