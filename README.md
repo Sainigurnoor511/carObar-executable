@@ -18,7 +18,8 @@ This is a Car Dealership Management Application built with Python and Tkinter. I
 
 ## Requirements
 
-To run the Car Dealership Management App, you need to have Python installed on your system. Additionally, Tkinter, which is included with most Python installations, is required for the graphical user interface.
+- [Python 3.xx](https://www.python.org/downloads/) 
+- [XAMPP](https://www.apachefriends.org/download.html)
 
 ## Usage
 
@@ -31,16 +32,14 @@ git https://github.com/Sainigurnoor511/carObar-executable.git
 2. Navigate to the project directory.
 
 ```bash
-cd car-dealership-app
+cd carObar-executable
 ```
 
-3. Run the application.
+3. Run XAMPP and create a new database named `carobar` and import the `carobar.sql` file.
 
-```bash
-python car_dealership_app.py
-```
+4. Click and run the application `carObar.exe`
 
-4. Use the application to manage your car dealership.
+5. Use the application to manage your car dealership.
 
 <!-- ## Screenshots
 
