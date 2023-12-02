@@ -8,6 +8,8 @@ class UpdatePass:
 
     def __init__(self):
         self.root = Toplevel()
+        self.root.iconbitmap("resources/myIcon.ico")
+        self.root.title("carObar -- Update Password")
         self.width_of_window = 900
         self.height_of_window = 450
         self.screen_width = self.root.winfo_screenwidth()
@@ -19,7 +21,6 @@ class UpdatePass:
         self.root.title("carObar -- Create New Password")
         self.root.resizable(width =False, height= False)
     
-
 
     def update_passw_frame(self):
         self.image_path = Image.open('images/mainpage/main.png').resize((350,300))

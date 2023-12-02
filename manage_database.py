@@ -5,6 +5,8 @@ import database, new_bought_car_page, car_services_page, sell_car_page, mainpage
 class DisplayCars:
     def __init__(self):
         self.root = Tk()
+        self.root.iconbitmap("resources/myIcon.ico")
+        self.root.title("carObar -- Manage Database")
         self.width_of_window = 1200
         self.height_of_window = 700
         self.screen_width = self.root.winfo_screenwidth()

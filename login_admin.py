@@ -7,6 +7,8 @@ import database, mainpage
 class Login:
     def __init__(self):
         self.root = Tk()
+        self.root.iconbitmap("resources/myIcon.ico")
+        self.root.title("carObar -- Login Screen")
         self.width_of_window = 900
         self.height_of_window = 450
         self.screen_width = self.root.winfo_screenwidth()
@@ -17,6 +19,7 @@ class Login:
         self.root.configure(bg ='#fff')
         self.root.title("carObar -- Login Page")
         self.root.resizable(width =False, height= False)
+        self.root.bind('<Return>', self.log_in)
         
 
     def login_frame(self):
@@ -40,10 +43,14 @@ class Login:
             name == self.user.get()
             if name=='':
                 self.user.insert(0,'Username')
+
+        def go_to_next_element(event):
+            event.widget.tk_focusNext().focus()
                 
         self.user = Entry(self.frame,width =25,fg ='black',border=0,font=('Microsoft YaHei UI Light',11))
         self.user.place(x=30,y=80)
         self.user.insert(0,'Username')
+        self.user.bind('<Return>', go_to_next_element)
         self.user.bind('<FocusIn>', on_enter)
         self.user.bind('<FocusOut>', on_leave)
 
@@ -59,15 +66,19 @@ class Login:
             if name=='':
                 self.passwd.insert(0,'Password')
 
+        def go_to_next_element(event):
+            event.widget.tk_focusNext().focus()
+
         self.passwd = Entry(self.frame,width =25,fg ='black',border=0,font=('Microsoft YaHei UI Light',11),show="*")
         self.passwd.place(x=30,y=150)
         self.passwd.insert(0,'Password')
+        self.user.bind('<Return>', go_to_next_element)
         self.passwd.bind('<FocusIn>', on_enter)
         self.passwd.bind('<FocusOut>', on_leave)
         Frame(self.frame,width=295,height=2,bg='black').place(x=25,y=177)
 
         #------------------------------------------------------------
-            
+
         self.b1 = Button(self.frame,width =39,pady=7,text="Sign in",bg='#57a1f8',fg='white',border=0, command=self.log_in).place(x=35,y=204)
         
 
@@ -103,6 +114,9 @@ class Login:
                 else:
 
                     messagebox.showerror("Alert!", "Incorrect username & password")
+
+        
+        
 
     # def open_update_password_window(self):
     

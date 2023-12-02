@@ -7,6 +7,7 @@ class BuyCarPage:
 
     def __init__(self):
         self.root = Tk()
+        self.root.iconbitmap("resources/myIcon.ico")
         self.root.title("carObar -- Buy Car")
         self.width_of_window = 1000
         self.height_of_window = 700

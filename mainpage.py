@@ -7,6 +7,7 @@ import buy_car_page, sell_car_page, new_bought_car_page, car_services_page, mana
 class HomePage:
     def __init__(self):
         self.root = Tk()
+        self.root.iconbitmap("resources/myIcon.ico")
         self.root.title('carObar')
         self.width_of_window = 1000
         self.height_of_window = 700
@@ -16,6 +17,7 @@ class HomePage:
         self.y_coordinate = (self.screen_height/2)-(self.height_of_window/1.8)
         self.root.geometry("%dx%d+%d+%d" %(self.width_of_window,self.height_of_window,self.x_coordinate,self.y_coordinate))
         self.root.resizable(width =False, height= False)
+        self.root.overrideredirect(1)
 
 
     #######################################       HOMEPAGE       ##################################################

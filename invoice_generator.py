@@ -6,6 +6,7 @@ from docxtpl import DocxTemplate
 class InvoiceGenerator:
     def __init__(self):
         self.root = Toplevel()
+        self.root.iconbitmap("resources\myIcon.ico")
         self.root.title("carObar -- Invoice Generator")
         self.width_of_root = 900
         self.height_of_root = 460
