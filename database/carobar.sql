@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 29, 2023 at 08:09 AM
+-- Generation Time: Dec 02, 2023 at 08:37 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -38,8 +38,10 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(10, 'Abhishek.0564', '123@#890'),
-(13, 'admin', '789456');
+(1, 'abhishek', '123@#890'),
+(2, 'gurnoor', '12345'),
+(3, 'admin', 'admin'),
+(4, 'admin', '12345');
 
 -- --------------------------------------------------------
 
@@ -62,13 +64,11 @@ CREATE TABLE `brand_new_cars_data` (
 --
 
 INSERT INTO `brand_new_cars_data` (`id`, `car_type`, `car_brand`, `car_model`, `car_variant`, `car_mileage`, `car_price`) VALUES
-(1, '', 'Honda', 'Amaze', 'Petrol', '18.4 (km/l)', 'Rs. 7,50,000'),
-(2, '', 'Hyundai Aura', 'Sedan', 'DOHC i-VTEC + VTC (1199 cc)', '18.4 (km/l)', 'Rs. 7,50,000'),
-(3, '', 'Renault Kiger', 'SUV', 'DOHC i-VTEC + VTC (1199 cc)', '18.4 (km/l)', 'Rs. 11,50,000'),
-(4, '', 'Toyota Glanza', 'SUV', 'DOHC i-VTEC + VTC (1199 cc)', '18.4 (km/l)', 'Rs. 11,50,000'),
-(14, '', 'sdasd', 'asdaas', 'Diesel', 'asdasd', 'asdas'),
-(15, '', 'honda', 'hello', 'Petrol', '15', '342342342'),
-(16, 'New', 'Kia', 'Seltos', 'Petrol', '18.6', 'Rs. 7850000');
+(1, 'new', 'Honda', 'Amaze', 'Petrol', '18.4 KM/H', 'Rs. 750000'),
+(2, 'new', 'Mahindra', 'Scorpio', 'Petrol', '18.6 KM/H', 'Rs. 1150000'),
+(3, 'new', 'Honda', 'Civic', 'Diesel', '18.6 KM/H', 'Rs. 599000'),
+(4, 'new', 'Kia', 'Seltos', 'Petrol', '18.6 KM/H', 'Rs. 850000'),
+(5, 'new', 'Maruti Suzuki', 'Swift', 'Diesel', '15 KM/H', 'Rs. 600000');
 
 -- --------------------------------------------------------
 
@@ -90,8 +90,8 @@ CREATE TABLE `car_services` (
 --
 
 INSERT INTO `car_services` (`id`, `service_type`, `service_time`, `service_date`, `customer_name`, `customer_contact`) VALUES
-(3, ' Full Car Service', '11:00 am - 1:00 pm', '26/7/23', 'Gurnoor Singh Saini', '9465301124'),
-(4, ' Full Car Service', '3:00 pm - 5:00 pm', '7/26/23', 'Gurnoor ', '9485305225');
+(1, ' Full Car Service', '11:00 am - 1:00 pm', '26/7/23', 'Gurnoor Singh Saini', '9465301124'),
+(2, ' Repair', '11:00 am - 1:00 pm', '12/11/23', 'Ayush Rawat', '9784562347');
 
 -- --------------------------------------------------------
 
@@ -118,11 +118,8 @@ CREATE TABLE `instock_cars_data` (
 --
 
 INSERT INTO `instock_cars_data` (`id`, `car_type`, `car_brand`, `car_model`, `car_variant`, `car_mileage`, `car_km_driven`, `car_registration_year`, `car_ownership`, `car_price`, `is_sold`) VALUES
-(2, 'used', 'Maruti', 'Dzire', 'Diesel', '17.6 KM/H', '20,000 KM', '2018', '1st Owner', 'Rs. 17,00,000', 'NO'),
-(6, 'new', 'Honda', 'Civic', 'Petrol', '18.8 KM/H', '0 KM', 'xxxx', 'N/A', 'RS. 20,00,000', ''),
-(7, 'New', 'Kia', 'Seltos', 'Petrol', '18.6', 'N/A', 'N/A', 'N/A', 'Rs. 7850000', 'NO'),
-(8, 'Used', 'Honda', 'city', 'Electric', 'N/A', '10,000 km - 20,000 k', '2021', '2nd owner', '80000/-', 'NO'),
-(9, '', 'Renault Kiger', 'SUV', 'DOHC i-VTEC + VTC (1', '18.4 (km/l)', 'N/A', 'N/A', 'N/A', 'Rs. 11,50,000', 'YES');
+(1, 'used', 'Maruti', 'Dzire', 'Diesel', '17.6 KM/H', '20,000 KM', '2018', '1st Owner', 'Rs. 17,00,000', 'NO'),
+(2, 'new', 'Kia', 'Seltos', 'Petrol', '18.6 KM/H', 'N/A', 'XXXX', 'N/A', 'Rs. 7850000', 'YES');
 
 -- --------------------------------------------------------
 
@@ -150,12 +147,9 @@ CREATE TABLE `secondhand_cars_bought_data` (
 --
 
 INSERT INTO `secondhand_cars_bought_data` (`id`, `car_type`, `car_brand`, `car_model`, `car_variant`, `car_km_driven`, `car_registration_year`, `car_ownership`, `seller_name`, `seller_contact`, `seller_address`, `car_price`) VALUES
-(20, 'Used', 'asdasd', 'asdasd', 'Electric', '30,000 km - 40,000 km', '2021', '4th owner', 'asdasd', 'asdasd', 'asdasd', '9000000'),
-(21, '', 'asda', 'dfdfdf', 'Electric', '30,000 km - 40,000 km', '2019', '3rd owner', 'dfdf', 'dfdfdf', 'dfdfdf', '56541487'),
-(31, 'Used', 'vsdfsfd', 'sdfdsf', 'Diesel', '10,000 km - 20,000 km', '2020', '3rd owner', 'sdfdsf', '787569874', 'sfsdfsdf', '462154'),
-(34, 'Used', 'Ford', 'Mustang GT 1990', 'Petrol', '1,00,000 km - 1,10,000 km', '1990', '4th owner', 'Vin Diesel', '787569874', 'North Carilona, st 24, Los Angeles', '0'),
-(35, 'Used', 'Ford', 'Mustang GT 1990', 'Petrol', '1,00,000 km - 1,10,000 km', '1990', '4th owner', 'Vin Diesel', '787569874', 'North Carilona, st 24, Los Angeles', '900000000/-'),
-(36, 'Used', 'Honda', 'city', 'Electric', '10,000 km - 20,000 km', '2021', '2nd owner', 'Vivek', '487845451', '23, st 4 hello road ', '80000/-');
+(1, 'used', 'Ford', 'Mustang GT 1990', 'Petrol', '1,00,000 km - 1,10,000 km', '1990', '4th owner', 'Vin Diesel', '787569874', 'North Carilona, st 24, Los Angeles', 'Rs. 9000000'),
+(2, 'used', 'Honda', 'Civic', 'Electric', '10,000 km - 20,000 km', '2021', '2nd owner', 'Vivek', '487845451', '23, st 4 hello road ', 'Rs. 840000'),
+(3, 'Used', 'Tesla', 'S1', 'Electric', '10,000 km - 20,000 km', '2022', '1st owner', 'Elon Musk', '+1 1234567890', 'St2, Los Angeles, H23', 'Rs. 15,00,000');
 
 --
 -- Indexes for dumped tables
@@ -199,7 +193,7 @@ ALTER TABLE `secondhand_cars_bought_data`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `brand_new_cars_data`
@@ -211,7 +205,7 @@ ALTER TABLE `brand_new_cars_data`
 -- AUTO_INCREMENT for table `car_services`
 --
 ALTER TABLE `car_services`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `instock_cars_data`
@@ -223,7 +217,7 @@ ALTER TABLE `instock_cars_data`
 -- AUTO_INCREMENT for table `secondhand_cars_bought_data`
 --
 ALTER TABLE `secondhand_cars_bought_data`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
